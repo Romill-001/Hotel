@@ -15,6 +15,10 @@ namespace HotelHW
         public CardOfClient()
         {
             InitializeComponent();
+            using (var t = new MainForm())
+            {
+                fullName.Text = t.FullName.ToString();
+            }
         }
     }
 }

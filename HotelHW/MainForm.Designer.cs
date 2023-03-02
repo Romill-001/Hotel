@@ -277,7 +277,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
             this.splitContainer1.Panel2MinSize = 300;
-            this.splitContainer1.Size = new System.Drawing.Size(940, 509);
+            this.splitContainer1.Size = new System.Drawing.Size(940, 497);
             this.splitContainer1.SplitterDistance = 200;
             this.splitContainer1.TabIndex = 17;
             // 
@@ -302,7 +302,7 @@
             this.splitter3.Enabled = false;
             this.splitter3.Location = new System.Drawing.Point(198, 0);
             this.splitter3.Name = "splitter3";
-            this.splitter3.Size = new System.Drawing.Size(2, 509);
+            this.splitter3.Size = new System.Drawing.Size(2, 497);
             this.splitter3.TabIndex = 7;
             this.splitter3.TabStop = false;
             // 
@@ -334,7 +334,7 @@
             this.splitContainer2.Panel2.Controls.Add(this.stlabel);
             this.splitContainer2.Panel2.Controls.Add(this.ShowCardButton);
             this.splitContainer2.Panel2MinSize = 300;
-            this.splitContainer2.Size = new System.Drawing.Size(736, 509);
+            this.splitContainer2.Size = new System.Drawing.Size(736, 497);
             this.splitContainer2.SplitterDistance = 427;
             this.splitContainer2.SplitterWidth = 2;
             this.splitContainer2.TabIndex = 0;
@@ -390,7 +390,7 @@
             this.splitter4.Enabled = false;
             this.splitter4.Location = new System.Drawing.Point(425, 0);
             this.splitter4.Name = "splitter4";
-            this.splitter4.Size = new System.Drawing.Size(2, 509);
+            this.splitter4.Size = new System.Drawing.Size(2, 497);
             this.splitter4.TabIndex = 3;
             this.splitter4.TabStop = false;
             // 
@@ -400,7 +400,7 @@
             this.splitter1.Enabled = false;
             this.splitter1.Location = new System.Drawing.Point(0, 0);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(2, 509);
+            this.splitter1.Size = new System.Drawing.Size(2, 497);
             this.splitter1.TabIndex = 2;
             this.splitter1.TabStop = false;
             // 
@@ -470,7 +470,7 @@
             // 
             this.PictureOfClient.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PictureOfClient.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.PictureOfClient.Location = new System.Drawing.Point(87, 54);
+            this.PictureOfClient.Location = new System.Drawing.Point(88, 54);
             this.PictureOfClient.Name = "PictureOfClient";
             this.PictureOfClient.Size = new System.Drawing.Size(150, 150);
             this.PictureOfClient.TabIndex = 10;
@@ -482,7 +482,7 @@
             this.splitter2.Enabled = false;
             this.splitter2.Location = new System.Drawing.Point(0, 0);
             this.splitter2.Name = "splitter2";
-            this.splitter2.Size = new System.Drawing.Size(2, 509);
+            this.splitter2.Size = new System.Drawing.Size(2, 497);
             this.splitter2.TabIndex = 8;
             this.splitter2.TabStop = false;
             // 
@@ -490,7 +490,7 @@
             // 
             this.ShowCardButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ShowCardButton.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ShowCardButton.Location = new System.Drawing.Point(129, 464);
+            this.ShowCardButton.Location = new System.Drawing.Point(131, 452);
             this.ShowCardButton.Name = "ShowCardButton";
             this.ShowCardButton.Size = new System.Drawing.Size(162, 32);
             this.ShowCardButton.TabIndex = 9;
@@ -512,12 +512,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
-            this.ClientSize = new System.Drawing.Size(934, 553);
+            this.ClientSize = new System.Drawing.Size(934, 541);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.MinimumSize = new System.Drawing.Size(950, 500);
+            this.MinimumSize = new System.Drawing.Size(950, 580);
             this.Name = "MainForm";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

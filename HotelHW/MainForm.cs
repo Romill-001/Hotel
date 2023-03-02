@@ -15,11 +15,22 @@ namespace HotelHW
 {
     public partial class MainForm : Form
     {
-        readonly CardOfClient card = new CardOfClient();
+        public CardOfClient card;
         public List<Person> persons = new List<Person>();
+        public string FullName;
+        public string DayOfBirth;
+        public string Payment;
+        public string Days;
+        public bool Animals;
+        public bool IsClientCardOpend;
+        public int num;
         public MainForm()
         {
             InitializeComponent();
+            Init();
+        }
+        private void Init()
+        {
             PictureOfClient.Visible = false;
             RoomNum.Visible = false;
             stlabel.Visible = false;
@@ -50,7 +61,8 @@ namespace HotelHW
 
         private void ShowCardButton_Click(object sender, EventArgs e)
         {
-            card.Show();
+            card = new CardOfClient();
+            card.ShowDialog();
         }
 
         private void ReservedStatus_CheckedChanged(object sender, EventArgs e)
@@ -95,11 +107,12 @@ namespace HotelHW
 
         private void ClientsList_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            RoomNum.Text = $"Номер № {persons[ClientsList.CurrentCell.RowIndex].room}";
-            CurrentStatusLabel.Text = persons[ClientsList.CurrentCell.RowIndex].status;
-            FullNameLabel.Text = persons[ClientsList.CurrentCell.RowIndex].full_name;
-            DateOfEnter.Text = persons[ClientsList.CurrentCell.RowIndex].date_of_entering;
-            DateOfLeaving.Text = persons[ClientsList.CurrentCell.RowIndex].date_of_leaving;
+            num = ClientsList.CurrentCell.RowIndex;
+            RoomNum.Text = $"Номер № {persons[num].room}";
+            CurrentStatusLabel.Text = persons[num].status;
+            FullNameLabel.Text = persons[num].full_name;
+            DateOfEnter.Text = persons[num].date_of_entering;
+            DateOfLeaving.Text = persons[num].date_of_leaving;
             PictureOfClient.Visible = true;
             RoomNum.Visible = true;
             stlabel.Visible = true;
@@ -107,6 +120,15 @@ namespace HotelHW
             FullNameLabel.Visible = true;
             GBDateOfEnter.Visible = true;
             GBDateOfLeaving.Visible = true;
+            GetInfo();
+        }
+        private void GetInfo()
+        {
+            FullName = persons[num].full_name;
+            DayOfBirth = persons[num].bday;
+            Payment = persons[num].payment;
+            Animals = persons[num].animals == 1;
+            IsClientCardOpend = true;
         }
     }
     public class Person
