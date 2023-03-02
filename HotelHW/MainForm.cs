@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HotelHW.Properties;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,11 +18,6 @@ namespace HotelHW
     {
         public CardOfClient card;
         public List<Person> persons = new List<Person>();
-        public string FullName;
-        public string DayOfBirth;
-        public string Payment;
-        public string Days;
-        public bool Animals;
         public bool IsClientCardOpend;
         public int num;
         public MainForm()
@@ -61,8 +57,14 @@ namespace HotelHW
 
         private void ShowCardButton_Click(object sender, EventArgs e)
         {
-            card = new CardOfClient();
-            card.ShowDialog();
+            if (IsClientCardOpend)
+            {
+                card.Show();
+            }
+            else
+            {
+                MessageBox.Show("Клиент не выбран");
+            }
         }
 
         private void ReservedStatus_CheckedChanged(object sender, EventArgs e)
@@ -104,8 +106,20 @@ namespace HotelHW
                 ClientsList.Rows[i].Visible = true;
             }
         }
+        private void GetInfo()
+        {
+            card = new CardOfClient
+            {
+                FullName = persons[num].full_name,
+                BDay = persons[num].bday,
+                Payment = persons[num].payment,
+                Days = persons[num].days,
+                Animals = '1'
+            };
+            IsClientCardOpend = true;
+        }
 
-        private void ClientsList_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void ClientsList_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             num = ClientsList.CurrentCell.RowIndex;
             RoomNum.Text = $"Номер № {persons[num].room}";
@@ -113,6 +127,10 @@ namespace HotelHW
             FullNameLabel.Text = persons[num].full_name;
             DateOfEnter.Text = persons[num].date_of_entering;
             DateOfLeaving.Text = persons[num].date_of_leaving;
+            if (persons[num].full_name.Equals('-'))
+            {
+                PictureOfClient.Image = Resources.user_male_circle__v1;
+            }
             PictureOfClient.Visible = true;
             RoomNum.Visible = true;
             stlabel.Visible = true;
@@ -121,14 +139,6 @@ namespace HotelHW
             GBDateOfEnter.Visible = true;
             GBDateOfLeaving.Visible = true;
             GetInfo();
-        }
-        private void GetInfo()
-        {
-            FullName = persons[num].full_name;
-            DayOfBirth = persons[num].bday;
-            Payment = persons[num].payment;
-            Animals = persons[num].animals == 1;
-            IsClientCardOpend = true;
         }
     }
     public class Person

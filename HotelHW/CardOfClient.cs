@@ -14,10 +14,45 @@ namespace HotelHW
     {
         public CardOfClient()
         {
-            InitializeComponent();
-            using (var t = new MainForm())
+            InitializeComponent();   
+        }
+        public char c;
+        public new string FullName
+        {
+            get { return fullName.Text; }
+            set { fullName.Text = value; }
+        }
+        public new string BDay
+        {
+            get { return BirthDay.Text; }
+            set { BirthDay.Text = value; }
+        }
+        public new string Payment
+        {
+            get { return PaymentLabel.Text; }
+            set { PaymentLabel.Text = value; }
+        }
+        public new string Days
+        {
+            get { return DaysLabel.Text; }
+            set { DaysLabel.Text = value; }
+        }
+        public new char Animals
+        {
+            get 
             {
-                fullName.Text = t.FullName.ToString();
+                return c; 
+            }
+            set 
+            {
+                if (value == '1')
+                {
+                    AnimalsCheck.Checked = true;
+                }
+                else
+                {
+                    AnimalsCheck.Checked = false;
+                }
             }
         }
     }

@@ -354,13 +354,14 @@
             this.Status,
             this.Room});
             this.ClientsList.Location = new System.Drawing.Point(62, 54);
+            this.ClientsList.MultiSelect = false;
             this.ClientsList.Name = "ClientsList";
             this.ClientsList.ReadOnly = true;
             this.ClientsList.RowHeadersVisible = false;
             this.ClientsList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ClientsList.Size = new System.Drawing.Size(313, 442);
             this.ClientsList.TabIndex = 4;
-            this.ClientsList.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ClientsList_CellContentDoubleClick);
+            this.ClientsList.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.ClientsList_CellMouseDoubleClick);
             // 
             // fullName
             // 
@@ -469,10 +470,12 @@
             // PictureOfClient
             // 
             this.PictureOfClient.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.PictureOfClient.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.PictureOfClient.Location = new System.Drawing.Point(88, 54);
+            this.PictureOfClient.BackColor = System.Drawing.SystemColors.Window;
+            this.PictureOfClient.ImageLocation = "";
+            this.PictureOfClient.Location = new System.Drawing.Point(90, 54);
             this.PictureOfClient.Name = "PictureOfClient";
             this.PictureOfClient.Size = new System.Drawing.Size(150, 150);
+            this.PictureOfClient.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PictureOfClient.TabIndex = 10;
             this.PictureOfClient.TabStop = false;
             // 
@@ -490,7 +493,7 @@
             // 
             this.ShowCardButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ShowCardButton.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ShowCardButton.Location = new System.Drawing.Point(131, 452);
+            this.ShowCardButton.Location = new System.Drawing.Point(139, 452);
             this.ShowCardButton.Name = "ShowCardButton";
             this.ShowCardButton.Size = new System.Drawing.Size(162, 32);
             this.ShowCardButton.TabIndex = 9;
