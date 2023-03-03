@@ -38,7 +38,7 @@ namespace HotelHW
             foreach (var line in File.ReadLines(@"./../../Clients.txt"))
             {
                 var client = line.Split('|');
-                persons.Add(new Person(client[0], client[1], client[2], client[3], client[4], char.Parse(client[5]), client[6], client[7], client[8]));
+                persons.Add(new Person(client[0], client[1], client[2], client[3], client[4], char.Parse(client[5]), client[6], client[7], client[8], client[9]));
             }
             foreach (var person in persons)
             {
@@ -69,8 +69,9 @@ namespace HotelHW
 
         private void ReservedStatus_CheckedChanged(object sender, EventArgs e)
         {
-            for(int i = 0; i < ClientsList.Rows.Count; i++)
+            for (int i = 0; i < ClientsList.Rows.Count; i++)
             {
+                ClientsList.Rows[i].DefaultCellStyle.BackColor = Color.White;
                 ClientsList.Rows[i].Visible = ClientsList[1, i].Value.ToString() == "зарезервировано";
             }
         }
@@ -79,6 +80,7 @@ namespace HotelHW
         {
             for (int i = 0; i < ClientsList.Rows.Count; i++)
             {
+                ClientsList.Rows[i].DefaultCellStyle.BackColor = Color.White;
                 ClientsList.Rows[i].Visible = ClientsList[1, i].Value.ToString() == "свободно";
             }
         }
@@ -87,6 +89,7 @@ namespace HotelHW
         {
             for (int i = 0; i < ClientsList.Rows.Count; i++)
             {
+                ClientsList.Rows[i].DefaultCellStyle.BackColor = Color.White;
                 ClientsList.Rows[i].Visible = ClientsList[1, i].Value.ToString() == "занято";
             }
         }
@@ -95,6 +98,7 @@ namespace HotelHW
         {
             for (int i = 0; i < ClientsList.Rows.Count; i++)
             {
+                ClientsList.Rows[i].DefaultCellStyle.BackColor = Color.White;
                 ClientsList.Rows[i].Visible = ClientsList[1, i].Value.ToString() == "выписывается";
             }
         }
@@ -114,7 +118,7 @@ namespace HotelHW
                 BDay = persons[num].bday,
                 Payment = persons[num].payment,
                 Days = persons[num].days,
-                Animals = '1'
+                Animals = persons[num].animals
             };
             IsClientCardOpend = true;
         }
@@ -127,10 +131,7 @@ namespace HotelHW
             FullNameLabel.Text = persons[num].full_name;
             DateOfEnter.Text = persons[num].date_of_entering;
             DateOfLeaving.Text = persons[num].date_of_leaving;
-            if (persons[num].full_name.Equals('-'))
-            {
-                PictureOfClient.Image = Resources.user_male_circle__v1;
-            }
+            PictureOfClient.Image = Image.FromFile(persons[num].image);
             PictureOfClient.Visible = true;
             RoomNum.Visible = true;
             stlabel.Visible = true;
@@ -138,7 +139,38 @@ namespace HotelHW
             FullNameLabel.Visible = true;
             GBDateOfEnter.Visible = true;
             GBDateOfLeaving.Visible = true;
+            ShowCardButton.Visible = true;
             GetInfo();
+        }
+
+        private void SearchButton_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < ClientsList.Rows.Count; i++)
+            {
+                if (SearchTextBox.Text != String.Empty)
+                {
+                    ClientsList.Rows[i].Visible = false;
+                }
+                for (int c = 0; c < ClientsList.Columns.Count; c++)
+                {
+                    if (ClientsList[c, i].Value.ToString() == SearchTextBox.Text)
+                    {
+                        ClientsList.Rows[i].Visible = true;
+                        ClientsList.Rows[i].DefaultCellStyle.BackColor = Color.Lavender;
+                        break;
+                    }
+                }
+            }
+            SearchTextBox.Text = String.Empty;
+            ChangeSearchBar();
+        }
+
+        private void ChangeSearchBar()
+        {
+            if (SearchTextBox.Text == "")
+            {
+                SearchLabel.Visible = true;
+            }
         }
     }
     public class Person
@@ -152,7 +184,8 @@ namespace HotelHW
         public string payment;
         public string date_of_entering;
         public string date_of_leaving;
-        public Person(string full_name, string status, string room, string bday, string days, char animals, string payment, string date_of_entering, string date_of_leaving)
+        public string image;
+        public Person(string full_name, string status, string room, string bday, string days, char animals, string payment, string date_of_entering, string date_of_leaving, string image)
         {
             this.full_name = full_name;
             this.status = status;
@@ -163,6 +196,7 @@ namespace HotelHW
             this.payment = payment;
             this.date_of_entering = date_of_entering;
             this.date_of_leaving = date_of_leaving;
+            this.image = image;
         }
     }
 }

@@ -165,7 +165,7 @@
             // 
             this.stlabel.AutoSize = true;
             this.stlabel.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.stlabel.Location = new System.Drawing.Point(33, 241);
+            this.stlabel.Location = new System.Drawing.Point(19, 241);
             this.stlabel.Name = "stlabel";
             this.stlabel.Size = new System.Drawing.Size(80, 22);
             this.stlabel.TabIndex = 7;
@@ -251,6 +251,7 @@
             this.SearchButton.Size = new System.Drawing.Size(26, 25);
             this.SearchButton.TabIndex = 18;
             this.SearchButton.UseVisualStyleBackColor = false;
+            this.SearchButton.Click += new System.EventHandler(this.SearchButton_Click);
             // 
             // splitContainer1
             // 
@@ -348,6 +349,7 @@
             this.ClientsList.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ClientsList.BackgroundColor = System.Drawing.SystemColors.Window;
             this.ClientsList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.ClientsList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedHorizontal;
             this.ClientsList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ClientsList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.fullName,
@@ -408,7 +410,7 @@
             // GBDateOfLeaving
             // 
             this.GBDateOfLeaving.Controls.Add(this.DateOfLeaving);
-            this.GBDateOfLeaving.Location = new System.Drawing.Point(37, 384);
+            this.GBDateOfLeaving.Location = new System.Drawing.Point(23, 384);
             this.GBDateOfLeaving.Name = "GBDateOfLeaving";
             this.GBDateOfLeaving.Size = new System.Drawing.Size(200, 50);
             this.GBDateOfLeaving.TabIndex = 14;
@@ -428,7 +430,7 @@
             // GBDateOfEnter
             // 
             this.GBDateOfEnter.Controls.Add(this.DateOfEnter);
-            this.GBDateOfEnter.Location = new System.Drawing.Point(37, 319);
+            this.GBDateOfEnter.Location = new System.Drawing.Point(23, 319);
             this.GBDateOfEnter.Name = "GBDateOfEnter";
             this.GBDateOfEnter.Size = new System.Drawing.Size(200, 50);
             this.GBDateOfEnter.TabIndex = 13;
@@ -450,7 +452,7 @@
             this.FullNameLabel.AutoSize = true;
             this.FullNameLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.FullNameLabel.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FullNameLabel.Location = new System.Drawing.Point(37, 284);
+            this.FullNameLabel.Location = new System.Drawing.Point(23, 278);
             this.FullNameLabel.Name = "FullNameLabel";
             this.FullNameLabel.Size = new System.Drawing.Size(53, 24);
             this.FullNameLabel.TabIndex = 12;
@@ -461,7 +463,7 @@
             this.CurrentStatusLabel.AutoSize = true;
             this.CurrentStatusLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CurrentStatusLabel.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CurrentStatusLabel.Location = new System.Drawing.Point(119, 241);
+            this.CurrentStatusLabel.Location = new System.Drawing.Point(105, 241);
             this.CurrentStatusLabel.Name = "CurrentStatusLabel";
             this.CurrentStatusLabel.Size = new System.Drawing.Size(42, 24);
             this.CurrentStatusLabel.TabIndex = 11;
@@ -472,7 +474,7 @@
             this.PictureOfClient.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.PictureOfClient.BackColor = System.Drawing.SystemColors.Window;
             this.PictureOfClient.ImageLocation = "";
-            this.PictureOfClient.Location = new System.Drawing.Point(90, 54);
+            this.PictureOfClient.Location = new System.Drawing.Point(93, 54);
             this.PictureOfClient.Name = "PictureOfClient";
             this.PictureOfClient.Size = new System.Drawing.Size(150, 150);
             this.PictureOfClient.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -493,12 +495,13 @@
             // 
             this.ShowCardButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ShowCardButton.Font = new System.Drawing.Font("Calibri", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ShowCardButton.Location = new System.Drawing.Point(139, 452);
+            this.ShowCardButton.Location = new System.Drawing.Point(131, 452);
             this.ShowCardButton.Name = "ShowCardButton";
             this.ShowCardButton.Size = new System.Drawing.Size(162, 32);
             this.ShowCardButton.TabIndex = 9;
             this.ShowCardButton.Text = "Просмотр карточки";
             this.ShowCardButton.UseVisualStyleBackColor = true;
+            this.ShowCardButton.Visible = false;
             this.ShowCardButton.Click += new System.EventHandler(this.ShowCardButton_Click);
             // 
             // pictureBox3

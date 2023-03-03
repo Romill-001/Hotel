@@ -98,7 +98,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Clients.txt" />
+    <Content Include="Icons\Ph1.jpg" />
+    <Content Include="Icons\Ph10.jpg" />
+    <Content Include="Icons\Ph2.jpg" />
+    <Content Include="Icons\Ph3.jpg" />
+    <Content Include="Icons\Ph4.jpg" />
+    <Content Include="Icons\Ph5.jpg" />
+    <Content Include="Icons\Ph6.jpg" />
+    <Content Include="Icons\Ph7.jpg" />
+    <Content Include="Icons\Ph8.jpg" />
+    <Content Include="Icons\Ph9.jpg" />
+    <Content Include="Icons\user-male-circle--v1.png" />
     <None Include="Resources\user-male-circle--v1.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

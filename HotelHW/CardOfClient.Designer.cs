@@ -44,7 +44,7 @@
             this.fullName.BackColor = System.Drawing.SystemColors.ControlLight;
             this.fullName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.fullName.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.fullName.Location = new System.Drawing.Point(78, 70);
+            this.fullName.Location = new System.Drawing.Point(36, 65);
             this.fullName.Name = "fullName";
             this.fullName.Size = new System.Drawing.Size(50, 30);
             this.fullName.TabIndex = 0;
@@ -56,7 +56,7 @@
             this.BirthDay.BackColor = System.Drawing.SystemColors.ControlLight;
             this.BirthDay.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.BirthDay.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BirthDay.Location = new System.Drawing.Point(78, 125);
+            this.BirthDay.Location = new System.Drawing.Point(36, 122);
             this.BirthDay.Name = "BirthDay";
             this.BirthDay.Size = new System.Drawing.Size(50, 30);
             this.BirthDay.TabIndex = 1;
@@ -66,7 +66,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(134, 256);
+            this.label1.Location = new System.Drawing.Point(98, 256);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(146, 21);
             this.label1.TabIndex = 3;
@@ -90,7 +90,7 @@
             this.AnimalsCheck.Enabled = false;
             this.AnimalsCheck.FlatAppearance.BorderSize = 2;
             this.AnimalsCheck.Font = new System.Drawing.Font("Microsoft YaHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AnimalsCheck.Location = new System.Drawing.Point(78, 300);
+            this.AnimalsCheck.Location = new System.Drawing.Point(41, 300);
             this.AnimalsCheck.Name = "AnimalsCheck";
             this.AnimalsCheck.Size = new System.Drawing.Size(219, 23);
             this.AnimalsCheck.TabIndex = 6;
@@ -103,7 +103,7 @@
             this.PaymentLabel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.PaymentLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PaymentLabel.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PaymentLabel.Location = new System.Drawing.Point(176, 188);
+            this.PaymentLabel.Location = new System.Drawing.Point(138, 188);
             this.PaymentLabel.Name = "PaymentLabel";
             this.PaymentLabel.Size = new System.Drawing.Size(50, 30);
             this.PaymentLabel.TabIndex = 7;
@@ -115,7 +115,7 @@
             this.DaysLabel.BackColor = System.Drawing.SystemColors.ControlLight;
             this.DaysLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.DaysLabel.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DaysLabel.Location = new System.Drawing.Point(78, 247);
+            this.DaysLabel.Location = new System.Drawing.Point(41, 247);
             this.DaysLabel.Name = "DaysLabel";
             this.DaysLabel.Size = new System.Drawing.Size(50, 30);
             this.DaysLabel.TabIndex = 8;
@@ -125,7 +125,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(78, 188);
+            this.label3.Location = new System.Drawing.Point(36, 188);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(92, 28);
             this.label3.TabIndex = 9;
