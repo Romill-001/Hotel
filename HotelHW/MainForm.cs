@@ -153,7 +153,7 @@ namespace HotelHW
                 }
                 for (int c = 0; c < ClientsList.Columns.Count; c++)
                 {
-                    if (ClientsList[c, i].Value.ToString() == SearchTextBox.Text)
+                    if (ClientsList[c, i].Value.ToString().Contains(SearchTextBox.Text))
                     {
                         ClientsList.Rows[i].Visible = true;
                         ClientsList.Rows[i].DefaultCellStyle.BackColor = Color.Lavender;
